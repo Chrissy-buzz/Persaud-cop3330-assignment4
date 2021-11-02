@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TextArea prefHeight="106.0" prefWidth="656.0" text="                               &#10;Your Options" wrapText="true">
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant>
+                                    <color>
+                                        <Color red="0.3989863693714142" green="0.9052631855010986" blue="0.7449421882629395" />
+                                    </color>
+                                </Light.Distant>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <font>
+                        <Font name="Elephant" size="24.0" />
+                    </font>
+                    <padding>
+                        <Insets left="25.0" />
+                    </padding>
+                </TextArea>
+                <TextArea layoutX="4.0" layoutY="118.0" prefHeight="279.0" prefWidth="647.0" text=" * Print out Options for User:     &#10;* Press 1 to add a new to do list   &#10;* Press 2 to Remove an existing to do list etc.     &#10;* Press 3 to edit the title of a list     &#10;* Press 4 to add to a list     &#10;* Press 5 to remove item from a list    &#10;* Press 6 to edit item on a list     &#10;* Press 7 to mark an item as complete     &#10;* Press 8 to display all items     &#10;* Press 9 to display all incomplete items     &#10;* Press 10 to display complete items     &#10;* Press 11 to print one list     &#10;* Press 12 to save one to do list to a file     &#10;* Press 13 to save all items on all to do lists to a file     &#10;* Press 14 to load a single to do list or all to do lists" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

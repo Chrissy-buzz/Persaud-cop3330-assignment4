@@ -1,0 +1,135 @@
+@startuml
+
+TodoList --|> tdList
+Details --|> tdList
+App -tdList : start >
+
+class App {
+}
+
+class Details {
+ String title
+ String description
+ date LocalDate
+ .. Getter ..
+ + getTitle ()
+ + getDescription ()
+ + getDate ()
+ .. Setter ..
+ + setTitle ()
+ + setDescription ()
+ + setDate ()
+}
+class tdList {
+ArrayList <String, String> tdList
+..
++addList ()
+int counter
+Object newList
+getTitle(newList)
+getDate(newList)
+getDescription(newList)
+..
++removeList ()
+String whichList1
+..
++editTitle ();
+String whichList2
+getTitle(whichList2)
+..
++addToList ();
+String whichList3
+int numItems
+String item
+..
++removeFromList ();
+String whichList4
+int itemOnList
+..
++editListItem();
+String whichList5
+String newdesc
+date newDate
+getDescription(newdesc)
+getDate(newDate)
+..
++complete();
+String whichList6
+..
++toString();
+..
++displayIncomplete();
+..
++displayComplete();
+..
++printOneList();
+String whichList7
+..
++saveoneTDList();
+..
++saveallLists();
+String enter
+..
++loadTDList();
+int howManyLists
+String whichLists
+..
+}
+class TodoList {
+int MAX
+ArrayList tdList
+int userInput
+int readInput
++ start ()
++ readNumber (userInput)
++ display ()
+toString
+
+start
++ switch (readInput)
+case (1)
+  :addList ();
+  :add list
+case (2)
+  :removeList ();
+  :remove a list
+case (3)
+  :editTitle ();
+  :edit the title;
+case (4)
+  :addToList ();
+  :add an item to list
+case (5)
+  :removeFromList ();
+  :remove item from list
+case (6)
+  :editListItem ();
+  :edit an item on the list
+case (7)
+  :complete ();
+  :mark complete
+case (8)
+  :toString ();
+  :print all lists
+case (9)
+  :displayIncomplete ();
+  :print incomplete lists
+case (10)
+  :displayComplete ();
+  :print incomplete lists
+case (11)
+  :printOneList ();
+  :print one list
+case (12)
+  :saveoneTDList ();
+  :save one list to file
+case (13)
+  :saveallLists ();
+  :save all lists to file
+case (14)
+  :loadTDList ();
+  :load a list or all lists
+end switch
+stop
+}
+@enduml
